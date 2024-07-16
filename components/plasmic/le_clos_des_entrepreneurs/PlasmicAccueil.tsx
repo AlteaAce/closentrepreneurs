@@ -193,7 +193,42 @@ function PlasmicAccueil__RenderFunc(props: {
                 {"Clos des \nentrepreneurs"}
               </h1>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__zRsIl)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                sty.freeBox__zRsIl,
+                "clicable"
+              )}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["runCode"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        customFunction: async () => {
+                          return (() => {
+                            const targetElement =
+                              document.getElementById("Booking_section");
+                            return targetElement.scrollIntoView({
+                              behavior: "smooth"
+                            });
+                          })();
+                        }
+                      };
+                      return (({ customFunction }) => {
+                        return customFunction();
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["runCode"] != null &&
+                  typeof $steps["runCode"] === "object" &&
+                  typeof $steps["runCode"].then === "function"
+                ) {
+                  $steps["runCode"] = await $steps["runCode"];
+                }
+              }}
+            >
               <div
                 className={classNames(
                   projectcss.all,
@@ -327,14 +362,15 @@ function PlasmicAccueil__RenderFunc(props: {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                '<!-- D\u00e9but de widget de lien Calendly -->\r\n<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">\r\n<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>\r\n<!-- Fin de widget de lien Calendly -->'
+                '<!-- D\u00e9but de widget de lien Calendly -->\r\n<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">\r\n<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>\r\n<!-- Fin de widget de lien Calendly -->\r\n\r\n<!-- Custom CSS -->\r\n<style>\r\n    .clicable{\r\n        cursor:pointer;\r\n    }\r\n</style>'
               }
             />
 
             <section
               data-plasmic-name={"card"}
               data-plasmic-override={overrides.card}
-              className={classNames(projectcss.all, sty.card, "Card")}
+              className={classNames(projectcss.all, sty.card, "Card, clicable")}
+              id={"Booking_section"}
               onClick={async event => {
                 const $steps = {};
 
