@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: nAndgS4Veydq6N5LKAnva3/projectcss
@@ -153,7 +155,7 @@ function PlasmicCartouche__RenderFunc(props: {
               return $props.content;
             } catch (e) {
               if (e instanceof TypeError) {
-                return "Objectif 1";
+                return "COLLABORER";
               }
               throw e;
             }

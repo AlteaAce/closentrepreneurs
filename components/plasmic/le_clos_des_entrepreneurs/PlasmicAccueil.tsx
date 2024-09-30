@@ -62,6 +62,7 @@ import {
 import ArrowBottom from "../../ArrowBottom"; // plasmic-import: Qzdt7emJbQ8f/component
 import Cartouche from "../../Cartouche"; // plasmic-import: 1dZS535PDilA/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -284,7 +285,7 @@ function PlasmicAccueil__RenderFunc(props: {
               )}
             >
               {
-                "Lorem ipsum dolor sit amet consectetur. Nisl viverra consequat ut fermentum eu. Sodales ultrices sed aliquam in. Arcu ultrices phasellus posuere dignissim quis elementum adipiscing habitant. Vestibulum mi dictum nisl risus tellus consectetur malesuada cum."
+                "Le Clos des Entrepreneurs est une association cr\u00e9\u00e9e en 2023, \u00e0 Lutry, avec pour vocation de rassembler des dirigeants d\u2019entreprises autour de probl\u00e9matiques communes. Ce r\u00e9seau a pour but de favoriser les \u00e9changes d\u2019exp\u00e9riences et de connaissances entre entrepreneurs, tout en offrant un espace d\u00e9di\u00e9 \u00e0 la collaboration et \u00e0 l\u2019entraide. Au-del\u00e0 des \u00e9changes informels, le Clos des Entrepreneurs se veut \u00eatre un lieu o\u00f9 les membres peuvent tisser des liens solides et explorer de nouvelles opportunit\u00e9s d'affaires, dans un cadre de confiance et de respect mutuel."
               }
             </div>
           </section>
@@ -326,7 +327,7 @@ function PlasmicAccueil__RenderFunc(props: {
               )}
             >
               {
-                "Lorem ipsum dolor sit amet consectetur. Nisl viverra consequat ut fermentum eu. Sodales ultrices sed aliquam in. Arcu ultrices phasellus posuere dignissim quis elementum adipiscing habitant. Vestibulum mi dictum nisl risus tellus consectetur malesuada cum."
+                "Les objectifs du Clos des Entrepreneurs sont multiples et visent \u00e0 soutenir activement ses membres dans leur parcours entrepreneurial. Nous nous engageons \u00e0 :"
               }
             </div>
             <Stack__
@@ -338,17 +339,19 @@ function PlasmicAccueil__RenderFunc(props: {
             >
               <Cartouche
                 className={classNames("__wab_instance", sty.cartouche__dEoLd)}
-                content={"Objectif 1"}
+                content={"Collaborer"}
               />
 
               <Cartouche
                 className={classNames("__wab_instance", sty.cartouche__b6U7H)}
-                content={"Objectif 2"}
+                content={"Progresser"}
               />
 
               <Cartouche
                 className={classNames("__wab_instance", sty.cartouche__imyu)}
-                content={"Objectif 3 avec plus de texte pour voir l'effet"}
+                content={
+                  "Favoriser la cr\u00e9ation de nouvelles opportunit\u00e9s et id\u00e9es communes"
+                }
               />
             </Stack__>
           </section>
@@ -441,7 +444,7 @@ function PlasmicAccueil__RenderFunc(props: {
                 )}
               >
                 {
-                  "Lorem ipsum dolor sit amet consectetur. Nisl viverra consequat ut fermentum eu. Sodales ultrices sed aliquam in. Arcu ultrices phasellus posuere dignissim quis elementum adipiscing habitant. Vestibulum mi dictum nisl risus tellus consectetur malesuada cum."
+                  "Le Clos des Entrepreneurs met \u00e0 disposition un espace d\u00e9di\u00e9 pour l\u2019organisation de vos r\u00e9unions, \u00e9v\u00e9nements ou ateliers. Cet espace est con\u00e7u pour favoriser les \u00e9changes entre membres dans un cadre agr\u00e9able et professionnel. Pour en savoir plus sur les conditions de r\u00e9servation et la disponibilit\u00e9 de notre local, n\u2019h\u00e9sitez pas \u00e0 nous contacter. Nous serons ravis de vous fournir les informations n\u00e9cessaires pour l\u2019organisation de votre prochain \u00e9v\u00e9nement."
                 }
               </div>
             </section>
