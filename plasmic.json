@@ -135,7 +135,7 @@
           "projectId": "nAndgS4Veydq6N5LKAnva3",
           "renderModuleFilePath": "plasmic/le_clos_des_entrepreneurs/PlasmicAccueil.tsx",
           "importSpec": {
-            "modulePath": "../pages/accueil.tsx"
+            "modulePath": "../pages/index.tsx"
           },
           "cssFilePath": "plasmic/le_clos_des_entrepreneurs/PlasmicAccueil.module.css",
           "scheme": "blackbox",
