@@ -145,6 +145,21 @@ function PlasmicAccueil__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicAccueil.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicAccueil.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicAccueil.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicAccueil.pageMetadata.description}
+        />
       </Head>
 
       <style>{`
@@ -607,7 +622,8 @@ export const PlasmicAccueil = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "Clos des entrepreneurs",
-      description: "",
+      description:
+        "C'est une association située à Lutry, avec pour vocation de rassembler les dirigeants d'entreprises autour de problématiques communes.",
       ogImageSrc: "",
       canonical: ""
     }
